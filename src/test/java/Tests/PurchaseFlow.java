@@ -108,6 +108,18 @@ public class PurchaseFlow extends WebTestBase {
         //step 14.Apply discount code
 
         wait.until(ExpectedConditions.elementToBeClickable(By.id("discount-code"))).sendKeys("SAVE10");
+
+        //  Wait for the discount code field and enter "SAVE10"
+        WebElement discountInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("discount-code")));
+        discountInput.clear();
+        // Good practice to clear existing text first
+        discountInput.sendKeys("SAVE10");
+        Thread.sleep(1000);
+
+
+        // 2. Wait for the "Apply" button to be ready and then click it
+        WebElement applyBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("apply-discount-btn")));
+        applyBtn.click();
         Thread.sleep(1000);
 
        //step 15.Click Confirm Purchase

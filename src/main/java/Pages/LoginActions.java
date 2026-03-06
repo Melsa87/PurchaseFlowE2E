@@ -16,8 +16,8 @@ public class LoginActions {
     WebDriverWait wait;
 
     // 1. Declare your credentials as class-level variables
-    String email = "melsa@gmail.co.za";
-    String password = "Pass@1234";
+    String email = "melsa@gmail.com";
+    String password = "Pass@123";
 
     public LoginActions(WebDriver driver) {
         this.driver = driver;
