@@ -15,9 +15,6 @@ public class LoginActions {
     WebDriver driver;
     WebDriverWait wait;
 
-    // 1. Declare your credentials as class-level variables
-    String email = "melsa@gmail.com";
-    String password = "Pass@123";
 
     public LoginActions(WebDriver driver) {
         this.driver = driver;
@@ -47,12 +44,12 @@ public class LoginActions {
     }
 
     // 2. Methods can now access 'email' and 'password' defined above
-    public void enterEmailAddress(String mail) {
+    public void enterEmailAddress(String email) {
         wait.until(ExpectedConditions.visibilityOf(loginEmailField));
         loginEmailField.sendKeys(email);
     }
 
-    public void enterPassword(String s) {
+    public void enterPassword(String password) {
         wait.until(ExpectedConditions.visibilityOf(loginPasswordField));
         loginPasswordField.sendKeys(password);
     }
